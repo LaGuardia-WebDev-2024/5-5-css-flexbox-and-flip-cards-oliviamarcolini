@@ -10,12 +10,146 @@ Comment Out Code Command + /
     <meta charset="utf-8" />
     <title>Unit 4 - Flexbox</title>
     <style>
- 
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  line-height: 1.6;
+}
+      #amor {
+        background-color: #bbb97f;
+      }
+      
+      #sozinho{
+        background-color: #7e2221;
+      }
+      
+      #linda {
+        background-color: #6d6b44;  
+      }
+      
+      #frango{
+        background-color: #eb930a;
+      }
+      
+      .main {
+        background-color: transparent;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      #tittle {
+        font-size: 3em;
+        text-align: center;
+        color: #788196;
+      }
     </style>
   </head>
   <body>
-    <h1>Jungle Animals</h1>
-
    
+    <h1 id="tittle">Songs Stuck in My Head 🎵</h1>
+    
+    <div class="main">
+      
+<div class="flip-card" >
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://i.scdn.co/image/ab67616d0000b273bcc5bfa480fd578d5572f527" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="amor">
+      <h1>Cheiro de Amor</h1> 
+      <p>By Maria Bethania</p> 
+      <p><em>"Mas o seu jeito de me olhar <br>
+          A fala mansa, meio rouca <br>
+          Foi me deixando quase louca <br>
+          Já não podia mais pensar <br>
+          Eu me dei toda pra você"</em></p>
+    </div>
+  </div>
+</div> 
+    
+      <div class="flip-card" >
+  <div class="flip-card-inner" >
+    <div class="flip-card-front">
+      <img src="https://i.scdn.co/image/ab67616d0000b273facee9ef541f73e70394ad47" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="sozinho">
+      <h1>Sozinho</h1> 
+      <p>By Caetano Veloso</p> 
+      <p><em>"Por que você me deixa tão solto <br>
+        Por que você nao cola em mim?<br>
+        Tô me sentindo muito sozinho"</em></p>
+    </div>
+  </div>
+</div> 
+      
+      <div class="flip-card" >
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/2e/75/7e/2e757e69-1096-0ebe-566e-c26743a8a762/888831268963.jpg/1200x1200bf-60.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="linda">
+      <h1>Coisa Mais Linda</h1> 
+      <p>By Joāo Gilberto</p> 
+      <p><em>"Porque tão linda assim <br>
+        Não existe, a flor <br>
+        Nem mesmo a cor não existe <br>
+        E o amor <br>
+        Nem mesmo o amor existe"</em></p>
+    </div>
+  </div>
+</div> 
+      
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://f4.bcbits.com/img/a2081112197_5.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="frango">
+      <h1>Insita em Mim</h1> 
+      <p>By Ana Frango Elétrico</p> 
+      <p><em>"Pegue o que quiser de mim <br> 
+        Me plante agora em seu jardim <br>
+        E se eu murchar, me regue <br>
+        Insista em mim"</em></p>
+    </div>
+  </div>
+</div> 
+    </div>
   </body>
 </html>
